@@ -1,0 +1,4 @@
+.customHeader{
+    background-color: var(--header-color);
+    color: var(--header-text-color);
+}
