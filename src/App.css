@@ -1,0 +1,16 @@
+body {
+  font-family: var(--resume-font);
+  background-color: var(--main-bg-color);
+}
+
+.app{
+  display: grid;
+  grid-template-columns: 1fr 2.3fr;
+  min-height: 100vh;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-md);
+}
+
+.preview{
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}

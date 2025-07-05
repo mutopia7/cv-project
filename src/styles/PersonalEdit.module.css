@@ -1,0 +1,42 @@
+.personalEdit{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    border-radius: var(--radius-md);
+
+    padding: var(--spacing-md);
+}
+
+.personalForm{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+
+}
+
+.personalForm label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs); 
+
+  font-weight: 700;
+}
+
+.personalForm input{
+    border-radius: var(--radius-sm);
+    border: none;
+
+    background-color: var(--main-bg-color);
+    
+    padding: var(--spacing-sm);
+
+    font-size: var(--font-sm);
+}
+
+.personalFormHeader{
+    font-weight: 700;
+    font-size: var(--font-xl);
+}

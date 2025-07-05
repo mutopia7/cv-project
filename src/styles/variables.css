@@ -21,6 +21,8 @@
     --header-color: #0e374e;
     --header-text-color: #fff;
     --main-bg-color: #f3f4f6;
+    --form-bg-color: #fff;
+    --form-text-color: black;
 
     /* spacing */
     --spacing-xs: 0.25rem;
@@ -39,4 +41,9 @@
 
     /* fonst */
     --resume-font: NotoSans, sans-serif;
+
+    /* radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+
 }

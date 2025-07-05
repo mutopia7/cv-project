@@ -8,8 +8,8 @@ function Header({ name, email, phone, address }) {
             <h1 className={styles.headerName}>{name || "Rasool Vahid"} </h1>
             <div className={styles.headerInf}>
                 <span><MdEmail />{email || "Mutopia20@gmail.com"} </span>
-                <span><MdPhone />{phone || "+98 902 9292 409"}</span>
-                <span><MdLocationOn />{address || "Rasht,IRI"}</span>
+                <span><MdPhone />{phone || "+98 902 9292 ***"}</span>
+                <span><MdLocationOn />{address || "Rasht, IRI"}</span>
             </div>
 
         </header>
