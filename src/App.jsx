@@ -11,11 +11,7 @@ function App() {
         address: 'Rasht, IRI',
     });
 
-
-
     function handleChange(e) {
-
-
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
