@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import PersonalEdit from './components/PersonalEdit';
-import './App.css'
+import EducationalPreview from './components/EducationPreview';
+import './App.css';
+
 
 function App() {
     const [formData, setFormData] = useState({
@@ -25,6 +27,7 @@ function App() {
             </section>
             <section className='preview'>
                 <Header {...formData}/>
+                <EducationalPreview />
             </section>
 
         </main>
