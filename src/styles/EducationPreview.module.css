@@ -17,6 +17,7 @@
 .infSec{
     display: grid;
     grid-template-columns: 1fr 2.3fr;
+    gap: var(--spacing-sm);
 
     padding-top: var(--spacing-md);
 }
