@@ -62,7 +62,7 @@ function App() {
         <main className='app'>
             <section className='editor'>
                 <PersonalEdit formData={formData} onChange={handleChange} />
-                <EducationEdit educationList={educationList} onChange={handleEducationChange} />
+                <EducationEdit educationList={educationList} setEducationList={setEducationList} onChange={handleEducationChange} />
             </section>
             <section className='preview'>
                 <Header {...formData} />

@@ -85,3 +85,46 @@
     color: var(--header-text-color);
     background-color: var(--header-color);
 }
+
+.btnGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.bothBtn{
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.delBtn, .cancelBtn{
+    border: 1px solid var(--form-items);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-sm);
+
+    font-weight: 700;
+    color: var(--form-items);
+}
+
+.delBtn:hover, .cancelBtn:hover{
+    background-color: var(--del-btn-color);
+    border-color: var(--del-btn-color);
+    color: var(--header-text-color);
+}
+
+.saveBtn{
+    color: var(--save-btn-color);
+    font-weight: 700;
+}
+
+.addEducationBtn{
+    font-weight: 700;
+    color: var(--save-btn-color);
+}
