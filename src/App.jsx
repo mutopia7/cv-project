@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import PersonalEdit from './components/PersonalEdit';
-import EducationalPreview from './components/EducationPreview';
+import EducationPreview from './components/EducationPreview';
 import './App.css';
 
 
@@ -27,7 +27,7 @@ function App() {
             </section>
             <section className='preview'>
                 <Header {...formData}/>
-                <EducationalPreview />
+                <EducationPreview />
             </section>
 
         </main>

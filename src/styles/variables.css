@@ -23,6 +23,7 @@
     --main-bg-color: #f3f4f6;
     --form-bg-color: #fff;
     --form-text-color: black;
+    --section-resume-bg: rgba(14, 55, 78, .07);
 
     /* spacing */
     --spacing-xs: 0.25rem;
@@ -43,6 +44,7 @@
     --resume-font: NotoSans, sans-serif;
 
     /* radius */
+    --radius-xs: 0.25rem;
     --radius-sm: 0.5rem;
     --radius-md: 1rem;
 
