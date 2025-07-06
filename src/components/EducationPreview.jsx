@@ -6,7 +6,7 @@ function EducationPreview({eduStartDate, eduEndDate , location, school, degree})
             <h2 className={styles.infHead}>Education</h2>
             <div className={styles.infSec}>
                 <div className={styles.timeAndLoc}>
-                    <p>{eduStartDate} - {eduEndDate}</p>
+                    <p>{eduStartDate} / {eduEndDate}</p>
                     <p>{location}</p>
                 </div>
 

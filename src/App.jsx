@@ -30,8 +30,8 @@ function App() {
     const [educationData, setEducationData] = useState({
         school: 'Odin Project',
         degree: 'Bachelors in FullStack',
-        eduStartDate: '03/2025',
-        eduEndDate: 'present',
+        eduStartDate: '2025-03',
+        eduEndDate: '2025-08',
         location: 'Online'
     });
 
