@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
 }
 
 .formSec label {
@@ -58,4 +59,29 @@
 
 .rotate {
     transform: rotate(180deg);
+}
+
+
+.itemsBtn{
+    background-color: inherit;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--header-color);
+    border-radius: var(--radius-sm);
+    outline: none;
+    cursor: pointer;
+
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: var(--form-items);
+}
+
+.itemsBtn:hover{
+    color: var(--header-text-color);
+    background-color: var(--header-color);
+}
+
+.selectForm{
+    color: var(--header-text-color);
+    background-color: var(--header-color);
 }

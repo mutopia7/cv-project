@@ -1,10 +1,10 @@
 import styles from '../styles/EducationPreview.module.css'
 
-function EducationPreview({eduStartDate, eduEndDate , location, school, degree}){
+function EducationItem({educationData}){
+    const {eduStartDate, eduEndDate , location, school, degree} = educationData;
+
     return (
-        <section className={styles.previewSec}>
-            <h2 className={styles.infHead}>Education</h2>
-            <div className={styles.infSec}>
+        <div className={styles.infSec}>
                 <div className={styles.timeAndLoc}>
                     <p>{eduStartDate} / {eduEndDate}</p>
                     <p>{location}</p>
@@ -14,7 +14,22 @@ function EducationPreview({eduStartDate, eduEndDate , location, school, degree})
                     <h3 className={styles.bold}>{school}</h3>
                     <p>{degree}</p>
                 </div>
-            </div>
+        </div>
+    )
+
+}
+
+function EducationPreview({educationList}){
+    
+    return (
+        <section className={styles.previewSec}>
+            <h2 className={styles.infHead}>Education</h2>
+            {educationList.map(item => (
+                <EducationItem 
+                    key={item.id}
+                    educationData={item}
+                />
+            ))}
         </section>
     )
 }

@@ -24,6 +24,7 @@
     --form-bg-color: #fff;
     --form-text-color: black;
     --section-resume-bg: rgba(14, 55, 78, .07);
+    --form-items: rgba(19, 21, 21, 0.6);
 
     /* spacing */
     --spacing-xs: 0.25rem;

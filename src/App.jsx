@@ -27,32 +27,46 @@ function App() {
 
 
     // state for education data
-    const [educationData, setEducationData] = useState({
-        school: 'Odin Project',
-        degree: 'Bachelors in FullStack',
-        eduStartDate: '2025-03',
-        eduEndDate: '2025-08',
-        location: 'Online'
-    });
+    const [educationList, setEducationList] = useState([
+        {
+            id: 1,
+            school: 'Odin Project',
+            degree: 'Bachelors in FullStack',
+            eduStartDate: '2025-03',
+            eduEndDate: '2025-08',
+            location: 'Online',
+            isOpen: false,
+        },
+        {
+            id: 2,
+            school: 'MIT',
+            degree: 'Masters in AI',
+            eduStartDate: '2024-01',
+            eduEndDate: '2024-12',
+            location: 'Cambridge',
+            isOpen: false,
+        }
+    ]);
 
     // handle chane for inputs within education form
-    function eduHandleChange(e){
+    function handleEducationChange(e, id) {
         const { name, value } = e.target;
-        setEducationData(prev => ({
-            ...prev,
-            [name]: value
-        }))
+        setEducationList(prev =>
+            prev.map(item =>
+                item.id === id ? { ...item, [name]: value } : item
+            )
+        );
     }
 
     return (
         <main className='app'>
             <section className='editor'>
                 <PersonalEdit formData={formData} onChange={handleChange} />
-                <EducationEdit educationData={educationData} onChange={eduHandleChange} />
+                <EducationEdit educationList={educationList} onChange={handleEducationChange} />
             </section>
             <section className='preview'>
-                <Header {...formData}/>
-                <EducationPreview {...educationData} />
+                <Header {...formData} />
+                <EducationPreview educationList={educationList} />
             </section>
 
         </main>
