@@ -3,6 +3,7 @@ import Header from './components/Header';
 import PersonalEdit from './components/PersonalEdit';
 import EducationPreview from './components/EducationPreview';
 import EducationEdit from './components/EducationEdit';
+import ProfessionalPreview from './components/ProfessionalPreview';
 import './App.css';
 
 
@@ -63,10 +64,12 @@ function App() {
             <section className='editor'>
                 <PersonalEdit formData={formData} onChange={handleChange} />
                 <EducationEdit educationList={educationList} setEducationList={setEducationList} onChange={handleEducationChange} />
+                
             </section>
             <section className='preview'>
                 <Header {...formData} />
                 <EducationPreview educationList={educationList} />
+                <ProfessionalPreview />
             </section>
 
         </main>
