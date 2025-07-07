@@ -21,9 +21,17 @@ function ProfessionalItem({professionalData}){
 }
 
 
-function ProfessionalPreview(){
+function ProfessionalPreview({professionalList}){
     return (
-        <div className={styles.l}>dsddsf</div>
+            <section className={styles.previewSec}>
+                <h2 className={styles.infHead}>Professional Experience</h2>
+                {professionalList.map(item => (
+                    <ProfessionalItem 
+                        key={item.id}
+                        professionalData={item}
+                    />
+                ))}
+            </section>
     )
 }
 

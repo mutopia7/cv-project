@@ -1,3 +1,27 @@
-.l{
-    background-color: red;
+.previewSec{
+    padding: var(--spacing-xl);
+}
+
+.infHead{
+    background-color: var(--section-resume-bg);
+
+    font-weight: 700;
+    font-size: var(--font-lg);
+
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-xs);
+
+    text-align: center;
+}
+
+.infSec{
+    display: grid;
+    grid-template-columns: 1fr 2.3fr;
+    gap: var(--spacing-sm);
+
+    padding-top: var(--spacing-md);
+}
+
+.bold{
+    font-weight: 700;
 }

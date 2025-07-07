@@ -59,6 +59,30 @@ function App() {
         );
     }
 
+    // state for professional data
+    const [professionalList, setProfessionalList] = useState([
+        {
+            id: 1,
+            company: 'Freelance Developer',
+            position: 'My own employer',
+            proStartDate: '2023-01',
+            proEndDate: '2025-05',
+            location: 'Rasht, IRI ',
+            description: 'worked on various projects ranging from web development to game development'
+
+        },
+        {
+            id: 2,
+            company: 'Sample Inc.',
+            position: 'My own employer',
+            proStartDate: '2022-01',
+            proEndDate: '2023-01',
+            location: 'Rasht, IRI ',
+            description: 'Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner.'
+
+        }
+    ]);
+
     return (
         <main className='app'>
             <section className='editor'>
@@ -69,7 +93,7 @@ function App() {
             <section className='preview'>
                 <Header {...formData} />
                 <EducationPreview educationList={educationList} />
-                <ProfessionalPreview />
+                <ProfessionalPreview professionalList={professionalList}/>
             </section>
 
         </main>
