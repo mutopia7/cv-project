@@ -64,12 +64,12 @@ function EducationEditItem({ educationData, onChange, onDelete, onSave, onCancel
                 />
             </label>
 
-            <label htmlFor="location">
+            <label htmlFor="eduLocation">
                 Location:
                 <input
                     type='text'
                     name='location'
-                    id='location'
+                    id='eduLocation'
                     value={educationData.location}
                     placeholder='Enter Location'
                     onChange={handleChange}

@@ -63,12 +63,12 @@ function ProfessionalEditItem({ professionalData, onChange, onDelete, onSave, on
                 />
             </label>
 
-            <label htmlFor="location">
+            <label htmlFor="Prolocation">
                 Location:
                 <input
                     type='text'
                     name='location'
-                    id='location'
+                    id='Prolocation'
                     value={professionalData.location}
                     placeholder='Enter Location'
                     onChange={handleChange}
