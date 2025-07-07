@@ -54,3 +54,64 @@ body {
   font-size: var(--font-sm);
 
 }
+
+
+/* ----------------------------- */
+/* 📱 Responsive Design */
+/* ----------------------------- */
+
+@media (max-width: 1024px) {
+  /* tablets */
+
+  .app {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md);
+  }
+
+  .editor {
+    gap: var(--spacing-lg);
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+  }
+
+  .clearBtn,
+  .loadBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+ /* phones */
+
+  .app {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-md);
+  }
+
+  .editor {
+    gap: var(--spacing-md);
+  }
+
+  .preview {
+    box-shadow: none;
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .clearBtn,
+  .loadBtn {
+    width: 100%;
+    justify-content: center;
+    font-size: var(--font-xs);
+  }
+}

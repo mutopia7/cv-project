@@ -6,7 +6,7 @@ function EducationItem({educationData}){
     return (
         <div className={styles.infSec}>
                 <div className={styles.timeAndLoc}>
-                    <p>{eduStartDate} / {eduEndDate}</p>
+                    {eduStartDate &&<p>{eduStartDate} / {eduEndDate}</p>}
                     <p>{location}</p>
                 </div>
 

@@ -6,7 +6,7 @@ function ProfessionalItem({professionalData}){
     return (
         <div className={styles.infSec}>
                 <div className={styles.timeAndLoc}>
-                    <p>{proStartDate} / {proEndDate}</p>
+                    {proStartDate && <p>{proStartDate} / {proEndDate}</p>}
                     <p>{location}</p>
                 </div>
 
