@@ -1,3 +1,9 @@
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+
 body {
   font-family: var(--resume-font);
   background-color: var(--main-bg-color);
@@ -52,8 +58,49 @@ body {
 
   font-weight: 700;
   font-size: var(--font-sm);
-
 }
+
+.downloadBtn{
+  color: var(--header-color);
+  font-weight: 700;
+  font-size: var(--font-sm);
+
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.printBtn{
+  font-weight: 700;
+  font-size: var(--font-sm);
+  background-color: var(--main-bg-color);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+
+  font-weight: 700;
+  font-size: var(--font-sm);
+}
+
+
+/* print */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .preview, .preview * {
+    visibility: visible;
+  }
+
+  .preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
 
 
 /* ----------------------------- */
@@ -79,7 +126,9 @@ body {
   }
 
   .clearBtn,
-  .loadBtn {
+  .loadBtn,
+  .downloadBtn,
+  .printBtn {
     width: 100%;
     justify-content: center;
   }
@@ -109,7 +158,9 @@ body {
   }
 
   .clearBtn,
-  .loadBtn {
+  .loadBtn,
+  .downloadBtn,
+  .printBtn {
     width: 100%;
     justify-content: center;
     font-size: var(--font-xs);

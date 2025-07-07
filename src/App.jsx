@@ -7,6 +7,8 @@ import ProfessionalPreview from './components/ProfessionalPreview';
 import ProfessionalEdit from './components/ProfessionalEdit';
 import './App.css';
 import { FaTrash } from 'react-icons/fa';
+import { FaFileDownload } from "react-icons/fa";
+import html2pdf from 'html2pdf.js';
 
 
 const personalInf = {
@@ -55,7 +57,7 @@ const proList = [
         proStartDate: '2022-01',
         proEndDate: '2023-01',
         location: 'Rasht, IRI ',
-        description: 'Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner. Designing multiple websites in a responsive manner.'
+        description: 'Designing multiple websites in a responsive manner.'
 
     }
 ];
@@ -106,13 +108,7 @@ function App() {
 
     // Clear resume function
     function clearResume() {
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            address: '',
-        });
-
+        setFormData({});
         setEducationList([]);
         setProfessionalList([]);
     }
@@ -124,21 +120,51 @@ function App() {
         setProfessionalList(proList);
     }
 
+    // handle print
+    function handlePrint() {
+        window.print();
+    }
+
+    // handle download resume by pdf
+    function handleDownloadPDF() {
+        const element = document.querySelector('.preview');
+        const opt = {
+            margin: 0,
+            filename: 'resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    }
+
     return (
         <main className='app'>
+
             <section className='editor'>
+
+                <section className='btnGroup'>
+                    <button type='button' className='downloadBtn' onClick={handleDownloadPDF}>
+                        <FaFileDownload />
+                        Download PDF
+                    </button>
+                    <button type='button' className='printBtn' onClick={handlePrint}>Print</button>
+                </section>
+
                 <section className='btnGroup'>
                     <button type='button' onClick={clearResume} className='clearBtn'>
                         <FaTrash aria-hidden="true" className='icon' />
                         Clear Resume
-                        </button>
+                    </button>
                     <button type='button' onClick={loadExample} className='loadBtn'>Load Example</button>
                 </section>
+
                 <PersonalEdit formData={formData} onChange={handleChange} />
                 <EducationEdit educationList={educationList} setEducationList={setEducationList} onChange={handleEducationChange} />
                 <ProfessionalEdit professionalList={professionalList} setProfessionalList={setProfessionalList} onChange={handleProfessionalChange} />
 
             </section>
+
             <section className='preview'>
                 <Header {...formData} />
                 <EducationPreview educationList={educationList} />
