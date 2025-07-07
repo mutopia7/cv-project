@@ -92,12 +92,22 @@ function App() {
     // state for professional data
     const [professionalList, setProfessionalList] = useState(proList);
 
+    // handle chane for inputs within Professional form
+    function handleProfessionalChange(e, id) {
+        const { name, value } = e.target;
+        setProfessionalList(prev =>
+            prev.map(item =>
+                item.id === id ? { ...item, [name]: value } : item
+            )
+        );
+    }
+
     return (
         <main className='app'>
             <section className='editor'>
                 <PersonalEdit formData={formData} onChange={handleChange} />
                 <EducationEdit educationList={educationList} setEducationList={setEducationList} onChange={handleEducationChange} />
-                <ProfessionalEdit />
+                <ProfessionalEdit professionalList={professionalList} setProfessionalList={setProfessionalList} onChange={handleProfessionalChange} />
 
             </section>
             <section className='preview'>

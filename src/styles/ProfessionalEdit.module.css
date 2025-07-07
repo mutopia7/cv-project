@@ -1,3 +1,130 @@
-.l{
-    background-color: red;
+.editSec {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    border-radius: var(--radius-md);
+
+    padding: var(--spacing-md);
+}
+
+.formSec {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.formSec label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+
+    font-weight: 700;
+}
+
+.formSec input {
+    border-radius: var(--radius-sm);
+    border: none;
+
+    background-color: var(--main-bg-color);
+
+    padding: var(--spacing-sm);
+
+    font-size: var(--font-sm);
+}
+
+.formHeader {
+    font-weight: 700;
+    font-size: var(--font-xl);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}
+
+.formHeaderTitle{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.arrow{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+.itemsBtn{
+    background-color: inherit;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--header-color);
+    border-radius: var(--radius-sm);
+    outline: none;
+    cursor: pointer;
+
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: var(--form-items);
+}
+
+.itemsBtn:hover{
+    color: var(--header-text-color);
+    background-color: var(--header-color);
+}
+
+.selectForm{
+    color: var(--header-text-color);
+    background-color: var(--header-color);
+}
+
+.btnGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.bothBtn{
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.delBtn, .cancelBtn{
+    border: 1px solid var(--form-items);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-sm);
+
+    font-weight: 700;
+    color: var(--form-items);
+}
+
+.delBtn:hover, .cancelBtn:hover{
+    background-color: var(--del-btn-color);
+    border-color: var(--del-btn-color);
+    color: var(--header-text-color);
+}
+
+.saveBtn{
+    color: var(--save-btn-color);
+    font-weight: 700;
+}
+
+.addProfessionalBtn{
+    font-weight: 700;
+    color: var(--save-btn-color);
 }
