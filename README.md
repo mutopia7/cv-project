@@ -1,12 +1,60 @@
-# React + Vite
+# 🧾 Resume Builder (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and interactive Resume Builder built with **React** — featuring real-time form editing, live preview, print/export to PDF functionality, and responsive design.
+---
 
-Currently, two official plugins are available:
+## 📸 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can check a demo of the app (hosted on GitHub Pages, Vercel, or Netlify):
 
-## Expanding the ESLint configuration
+👉 [Live Demo Link][(https://cv-project-two-zeta.vercel.app/)] <!-- Replace with actual link if hosted -->
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- 🎯 **Live Editing** of Personal Info, Education, and Professional Experience.
+- 🪄 **Real-Time Preview** of the final resume alongside the editor panel.
+- 📱 **Responsive Design** for mobile, tablet, and desktop views.
+- 🖨️ **Print Resume** directly from the browser.
+- 📄 **Export to PDF** using `html2pdf.js`.
+- ➕ **Add / Edit / Delete** entries for Education and Experience.
+- ♻️ **Reset Resume** to clear all data.
+
+---
+
+## 🛠️ Technologies Used
+
+- **React** (Functional Components + Hooks)
+- **CSS Modules**
+- **React Icons**
+- **html2pdf.js** (for PDF export)
+- **Custom Responsive CSS** (No framework)
+
+---
+
+## 📦 Folder Structure
+
+```
+📁 src
+│
+├── components
+│   ├── Header.jsx
+│   ├── PersonalEdit.jsx
+│   ├── EducationEdit.jsx
+│   ├── ProfessionalEdit.jsx
+│   ├── EducationPreview.jsx
+│   └── ProfessionalPreview.jsx
+│
+├── styles
+│   ├── PersonalEdit.module.css
+│   ├── EducationEdit.module.css
+│   └── ProfessionalEdit.module.css
+│
+├── App.jsx
+├── App.css
+└── index.js
+```
+
+
+
