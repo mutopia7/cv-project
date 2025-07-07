@@ -6,6 +6,7 @@ import EducationEdit from './components/EducationEdit';
 import ProfessionalPreview from './components/ProfessionalPreview';
 import ProfessionalEdit from './components/ProfessionalEdit';
 import './App.css';
+import { FaTrash } from 'react-icons/fa';
 
 
 const personalInf = {
@@ -61,6 +62,7 @@ const proList = [
 
 
 
+
 function App() {
 
     // state for personal data
@@ -102,9 +104,36 @@ function App() {
         );
     }
 
+    // Clear resume function
+    function clearResume() {
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            address: '',
+        });
+
+        setEducationList([]);
+        setProfessionalList([]);
+    }
+
+    // Load example function
+    function loadExample() {
+        setFormData(personalInf);
+        setEducationList(eduList);
+        setProfessionalList(proList);
+    }
+
     return (
         <main className='app'>
             <section className='editor'>
+                <section className='btnGroup'>
+                    <button type='button' onClick={clearResume} className='clearBtn'>
+                        <FaTrash aria-hidden="true" className='icon' />
+                        Clear Resume
+                        </button>
+                    <button type='button' onClick={loadExample} className='loadBtn'>Load Example</button>
+                </section>
                 <PersonalEdit formData={formData} onChange={handleChange} />
                 <EducationEdit educationList={educationList} setEducationList={setEducationList} onChange={handleEducationChange} />
                 <ProfessionalEdit professionalList={professionalList} setProfessionalList={setProfessionalList} onChange={handleProfessionalChange} />

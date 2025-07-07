@@ -7,9 +7,9 @@ function Header({ name, email, phone, address }) {
         <header className={styles.customHeader} aria-label="User personal information header">
             <h1 className={styles.headerName}>{name} </h1>
             <div className={styles.headerInf}>
-                <span><MdEmail />{email} </span>
-                <span><MdPhone />{phone}</span>
-                <span><MdLocationOn />{address}</span>
+                {email && <span><MdEmail /> {email}</span>}
+                {phone && <span><MdPhone />{phone}</span>}
+                {address && <span><MdLocationOn />{address}</span>}
             </div>
 
         </header>
